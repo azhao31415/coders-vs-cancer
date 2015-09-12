@@ -17,12 +17,12 @@
  */
 
 body {
-  background-image: url('/assets/hands-3-opaque.jpg');
+  background-image: url('/assets/woman-smiling.jpg');
   background-repeat: no-repeat;
 }
 
 h1 {
-  color: white;
+  color: turquoise;
 }
 
 .container {
@@ -31,12 +31,18 @@ h1 {
 }
 
 .lil-container {
+  background-color: gray;
+  opacity: .7;
   border: 5px solid white;
+  /*box-shadow:  5px 5px -5px orange;*/
   margin-top: 275px;
+  left: 15px;
   padding: 15px;
 }
 
 p {
-  color: white;
+   font-family: 'Blanco-Italic', Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  color: pink;
   font-weight: bold;
 }
