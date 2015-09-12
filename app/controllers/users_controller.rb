@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     # @user = User.find(session[:user_id])  
     @user = User.find(params[:id])
+    @invite = Invite.new
   end
 
   def new
