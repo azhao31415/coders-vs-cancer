@@ -9,17 +9,24 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+		respond_to do |format| 
+		  	format.html { render layout: !request.xhr? }
+				format.js
+		end
   end
 
   def create
     @user = User.new(user_params)
-
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to @user
-    else
-      render :new
-    end
+		respond_to do |format| 
+	  	if @user.save        
+		 		session[:user_id] = @user.id    
+		  	format.html { redirect_to root_path, notice: 'Thanks for signing up.' }
+				format.json { render json: {status: :created, name: @user.first_name} }
+			else
+				format.html { render :new }
+				format.json { render json: {status: "failed to create account"} }
+			end
+		end
   end
 
   private
