@@ -13,6 +13,8 @@
     <%= f.label :email %>
     <%= f.email_field :email %>
     <%= f.submit 'Submit', class: 'submit button', id: 'invite' %>
+    <%= hidden_field_tag 'group_id', @user.groups.first.id %>
+    <%= hidden_field_tag 'user_id', @user.id %>
   <% end %>
 </div>
 
