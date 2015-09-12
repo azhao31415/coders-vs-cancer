@@ -1,0 +1,16 @@
+<div>
+  <h2>
+    <%= @user.first_name %> 
+    <%= @user.last_name %>
+  </h2>
+  <h4>Stats</h4>
+  <div>Check Day: <%= @user.check_day_of_month %></div>
+  <div>Other Stat: </div>
+  <div>Other Stat: </div>
+  <div>Other Stat: </div>
+  <div>Other Stat: </div>
+</div>
+
+<div>
+  <%= render partial: 'groups/show', locals: {group: @user.groups.first} %>
+</div>
