@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :email, null: false
-      t.string :email_verify, null: false
+      t.string :email_verify
       t.string :phone, null: false
       t.string :phone_verify, default: nil
       t.string :phone_provider, null: false
