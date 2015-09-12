@@ -92,7 +92,7 @@ loadLogin = function(){
 $(document).on('ready page:load', function(){
 	loadSignup();
 	loadLogin();
-	$('#login_form').submit(function(event){
+	$('#login').on('submit', '#login_form', function(event){
 		event.preventDefault();
 		$contact_data = $(event.target);
 		$.ajax({
@@ -104,7 +104,7 @@ $(document).on('ready page:load', function(){
 			login(response);
 		});
 	});
-	$('#signup_form').submit(function(event){
+	$('#signup').on('submit' , '#signup_form', function(event){
 		event.preventDefault();
 		$contact_data = $(event.target);
 		$.ajax({
