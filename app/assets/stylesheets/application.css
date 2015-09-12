@@ -16,3 +16,15 @@
 
  */
 
+body {
+  background-image: url('/assets/hands-3-opaque.jpg');
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
+}
+
+.splash {
+  border: 1px solid white;
+}
