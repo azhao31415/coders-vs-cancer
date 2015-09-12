@@ -1,0 +1,46 @@
+<%= form_for(@user, html: {class: :form}) do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div>
+    <%= f.label :phone_provider %>
+    <%= f.text_field :phone_provider %>
+  </div>
+
+  <div>
+    <%= f.label :prefered_contact %>
+    <%= f.text_field :prefered_contact %>
+  </div>
+
+  <div>
+    <%= f.label :check_day_of_month %>
+    <%= f.text_field :check_day_of_month %>
+  </div>
+
+  <div>
+    <% button_text = (@edit ? 'Save' : 'Sign Up') %>
+    <%= f.submit(button_text, class: 'submit button', id: 'submit') %>
+  </div>
+<% end %>
