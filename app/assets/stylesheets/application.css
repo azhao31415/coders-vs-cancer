@@ -23,6 +23,7 @@ body {
 
 h1 {
   color: turquoise;
+  font-family:
 }
 
 .container {
@@ -41,8 +42,9 @@ h1 {
 }
 
 p {
-   font-family: 'Blanco-Italic', Helvetica, Arial, sans-serif;
+  font-family: 'Courier', Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   color: pink;
   font-weight: bold;
 }
+
