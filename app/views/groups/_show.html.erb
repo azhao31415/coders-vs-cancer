@@ -1,6 +1,6 @@
 <div>
   <h4>Group</h4>
-  <div><%= group.name %></div>
+  <div><%= group.name.capitalize %></div>
   <% group.users.each do |user| %>
     <%= render partial: 'users/show', locals: {user: user} %>
   <% end %>
