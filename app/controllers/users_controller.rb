@@ -9,6 +9,10 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+		respond_to do |format| 
+		  	format.html { render layout: !request.xhr? }
+				format.js
+		end
   end
 
   def create
