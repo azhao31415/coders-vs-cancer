@@ -56,7 +56,7 @@ h2 {
   /*box-shadow:  5px 5px -5px orange;*/
   margin-top: 8%;
   left: 30px;
-  padding: 1px;
+
 }
 
 p {
@@ -71,7 +71,7 @@ p {
   color: #f6f6b6;
   font-family: 'Muli';
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.0em;
   font-weight: bold;
 }
 
@@ -107,4 +107,22 @@ a.fi-heart:hover {
 
 .copy {
   font-family: 'Muli';
+}
+
+.motto {
+  display: inline-block;
+  height: 20%;
+  width: 20%;
+  border: 2px solid white;
+  border-radius: 10%;
+  margin-right: 5%;
+  padding: 12px;
+}
+
+.break {
+  padding: 15px;
+}
+
+.fi-check {
+  font-size: 1.8em;
 }
