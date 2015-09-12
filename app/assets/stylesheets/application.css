@@ -24,13 +24,14 @@ body {
 }
 
 h1 {
-  color: turquoise;
+  color: pink;
   font-family: 'Libre Baskerville', serif;
+  font-size: 4.0em;
 }
 
 .container {
   width: 50%;
-  margin: 0 auto;
+  margin-left: 30px;
 }
 
 .lil-container {
@@ -38,15 +39,22 @@ h1 {
   opacity: .7;
   border: 5px solid white;
   /*box-shadow:  5px 5px -5px orange;*/
-  margin-top: 275px;
-  left: 15px;
+  margin-top: 100px;
+  left: 30px;
   padding: 15px;
 }
 
 p {
+  padding: 5px;
   font-family: 'Libre Baskerville', serif;
   font-size: 1.0em;
-  color: pink;
+  color: white;
   font-weight: bold;
 }
 
+.motto {
+  color: yellow;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+}
