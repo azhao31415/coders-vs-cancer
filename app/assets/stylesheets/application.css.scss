@@ -32,7 +32,13 @@ body {
 h1 {
   color: pink;
   font-family: 'Quicksand', serif;
-  font-size: 4.5em;
+  font-size: 5.0em;
+}
+
+h2 {
+  color: white;
+  font-family: 'Libre Baskerville';
+  font-style: italic;
 }
 
 .container {
@@ -46,7 +52,7 @@ h1 {
   overflow: hidden;
   background-color: gray;
   opacity: .7;
-  border: 5px solid white;
+  border: 10px solid white;
   /*box-shadow:  5px 5px -5px orange;*/
   margin-top: 8%;
   left: 30px;
@@ -63,9 +69,10 @@ p {
 
 .motto {
   color: #f6f6b6;
+  font-family: 'Muli';
+  font-style: italic;
   font-size: 1.5em;
   font-weight: bold;
-  font-style: italic;
 }
 
 .ladybug {
@@ -96,4 +103,8 @@ a.fi-heart:hover {
 
 #slide2 {
   background-color: #F6CED8;
+}
+
+.copy {
+  font-family: 'Muli';
 }
