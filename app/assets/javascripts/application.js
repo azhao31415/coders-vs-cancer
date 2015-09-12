@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(document).foundation();
 var signup, login, logout
 login = function(response) {
 	if (response.status == "failed") {
@@ -32,7 +32,7 @@ login = function(response) {
 logout = function() {
 	$.ajax({
 		url: "/logout",
-		dataType: "json",
+		dataType: "json"
 	}).done(function(saveMessage){
 		$('#user_profile_link').text("no user");
 		$('.user_links').toggle();
@@ -54,15 +54,68 @@ accountModalOpen = function(type) {
 
 accountModalTypeSelect = function(type) {
 	if (type === "login") {
-		$("#account_modal_login").show();
-		$("#account_modal_signup").hide();
+		$("#login-link").addClass('active');
+		$('#login').addClass('active');
+		$("#signup-link").removeClass('active');
+		$("#signup").removeClass('active');
 	} else if (type === "signup") {
-		$("#account_modal_login").hide();
-		$("#account_modal_signup").show();
+		$("#login-link").removeClass('active');
+		$('#login').removeClass('active');
+		$("#signup-link").addClass('active');
+		$("#signup").addClass('active');
 	};
+	$(document).foundation('reflow');
+};
+
+loadSignup = function(){
+	$.ajax({
+		url: "/signup",
+		dataType: "html"
+	}).done(function(response){
+		$('#signup').html(response);
+	}).fail(function(){
+		console.log('failed');
+	});
+};
+
+loadLogin = function(){
+	$.ajax({
+		url: "/login",
+		dataType: "html"
+	}).done(function(response){
+		$('#login').html(response);
+	}).fail(function(){
+		console.log('failed');
+	});
 };
 
 $(document).on('ready page:load', function(){
+	loadSignup();
+	loadLogin();
+	$('#login_form').submit(function(event){
+		event.preventDefault();
+		$contact_data = $(event.target);
+		$.ajax({
+			url: $contact_data.attr("action"),
+			type: $contact_data.attr("method"),
+			data: $contact_data.serialize(),
+			dataType: 'json'
+		}).done(function(response) {
+			login(response);
+		});
+	});
+	$('#signup_form').submit(function(event){
+		event.preventDefault();
+		$contact_data = $(event.target);
+		$.ajax({
+			url: $contact_data.attr("action"),
+			type: $contact_data.attr("method"),
+			data: $contact_data.serialize(),
+			dataType: 'json'
+		}).done(function(response) {
+			signup(response);
+		});
+	});
 	$(document).on('click', '#logout_link', function(event){
 		event.preventDefault();
 		logout();
@@ -77,3 +130,4 @@ $(document).on('ready page:load', function(){
 	});
 
 });
+
