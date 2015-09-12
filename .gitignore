@@ -10,7 +10,8 @@ capybara-*.html
 /spec/tmp
 /db/schema.rb
 /public/assets
-GEMFILE.lock
+Gemfile.lock
+*.swp
 **.orig
 rerun.txt
 pickle-email-*.html
