@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 
 	def new
+		respond_to do |format| 
+		  	format.html { render layout: !request.xhr? }
+		end
 	end
 
 	def create
