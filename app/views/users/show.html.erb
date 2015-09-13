@@ -4,8 +4,8 @@
       <%= @user.first_name %> <%= @user.last_name %>
     </h2>
     <div id="personal-info" class="small-centered medium-centered large-centered columns text-center">
-      <p>Self Check Day: <%= @user.check_day_of_month %>th of every month</p>
-      <p>Contact method: <%= @user.prefered_contact%> Phone number: <%= @user.phone%></p>
+      <h3>Self Check Day: </h3><h3><%= @user.check_day_of_month %>th of every month</h3>
+      <h3>Contact method: </h3><h3><%= @user.prefered_contact%></h3> <h3>Phone number: </h3><h3><%= @user.phone%></h3>
     <button type="button" class="buttons">Edit profile</button>
     </div>
 
