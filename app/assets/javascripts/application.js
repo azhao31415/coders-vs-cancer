@@ -153,12 +153,15 @@ $(document).on('ready page:load', function(){
 	    data: $(this).serialize()
 	  })
 	  .done(function() {
-	    $.ajax({
-	    	url: '/groups/' + group_id
-	    }).done(function(groupHTML) {
-	    	group = $('#group');
-	      group.replaceWith(groupHTML);
-	    });
+	  	setTimeout(function(){
+		  	$.ajax({
+		    	url: '/groups/' + group_id
+		    }).done(function(groupHTML) {
+		    	group = $('#group');
+		      group.replaceWith(groupHTML);
+		      $(document).foundation('reflow');
+		    });
+	  	}, 5000);
 	  });
 	});
 });
