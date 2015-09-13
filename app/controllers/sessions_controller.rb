@@ -25,8 +25,9 @@ class SessionsController < ApplicationController
 	def destroy
 		session[:user_id] = nil
 		respond_to do |format|
+			@html = render_to_string('welcome/index', layout: false)
 			format.html { redirect_to root_path, notice: 'Goodbye.' }
-			format.json { render json: {status: "log out successful"} }
+			format.json { render json: {status: "log out successful", html: @html} }
 		end
 	end
 
