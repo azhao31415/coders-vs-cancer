@@ -143,7 +143,7 @@ $(document).on('ready page:load', function(){
 	$('#panel3').on('toggled', function (event, tab) {
 		$(document).foundation('reflow');	
 	});
-	$('#new_invite').on('submit', function(event) {
+	$('#invite-form').on('submit', '#new_invite', function(event) {
 	  event.preventDefault();
 	  var invite_button = event.target
 	  var group_id = $('#group_id')[0].value
@@ -158,7 +158,7 @@ $(document).on('ready page:load', function(){
 		    	url: '/groups/' + group_id
 		    }).done(function(groupHTML) {
 		    	group = $('#group');
-		      group.replaceWith(groupHTML);
+		    	group.empty().html(groupHTML);
 		      $(document).foundation('reflow');
 		    });
 	  	}, 5000);
