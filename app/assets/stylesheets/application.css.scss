@@ -150,23 +150,25 @@ a.fi-heart:hover {
   padding: 1.2%;
 }
 
+.group-name {
+  color: #FFCC00;
+  font-size: 1.5em;
+  margin-left: 5%;
+}
+
 .members {
   border: 1px solid black;
   border-radius: 50%;
-  width: 50%;
   }
-
-.member-info {
-  display: inline-block;
-}
 
 #personal-info {
   border: 2px dotted #CECEFF;
   border-radius: 10px;
-  widht: 50%;
+  width: 60%;
 }
 
 #invite-form {
   width: 40%;
+  margin-top: 10%;
 }
 

@@ -13,7 +13,7 @@
       <%= render partial: 'groups/show', locals: {group: @user.groups.first}%>
     </div>
 
-    <div id="invite-form">
+    <div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
       <%= form_for @invite do |f| %>
         <%= f.label "Invite your friends to join!" %>
         <%= f.email_field :email %>
