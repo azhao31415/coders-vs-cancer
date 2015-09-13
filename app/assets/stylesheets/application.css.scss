@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  color: rgba(0,0,0,0.7);
+  color: black;
   font-family: 'Quicksand', serif;
   font-size: 5.0em;
 }
@@ -50,7 +50,8 @@ h2 {
   min-height: 70%;
   max-height: 70%;
   overflow: hidden;
-  background-color: rgba(128,128,128,0.7);
+  background-color: gray;
+  opacity: .7;
   border: 10px solid white;
   margin-top: 8%;
   left: 30px;
@@ -133,7 +134,7 @@ a.fi-heart:hover {
   max-height: 70%;
   overflow: hidden;
   background-color: rgba(128,128,128,0.7);
-  border: 10px solid white;
+  border: 10px solid rgba(255,255,255,0.7);
   margin-top: 8%;
   left: 30px;
 }
@@ -142,9 +143,30 @@ a.fi-heart:hover {
   margin-top: 6%;
 }
 
-#edit-button {
+.buttons {
   background-color: #202020;
   opacity: 0.6;
   border-radius: 25px;
   padding: 1.2%;
 }
+
+.members {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 50%;
+  }
+
+.member-info {
+  display: inline-block;
+}
+
+#personal-info {
+  border: 2px dotted #CECEFF;
+  border-radius: 10px;
+  widht: 50%;
+}
+
+#invite-form {
+  width: 40%;
+}
+
