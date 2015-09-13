@@ -143,4 +143,22 @@ $(document).on('ready page:load', function(){
 	$('#panel3').on('toggled', function (event, tab) {
 		$(document).foundation('reflow');	
 	});
+	$('#new_invite').on('submit', function(event) {
+	  event.preventDefault();
+	  var invite_button = event.target
+	  var group_id = $('#group_id')[0].value
+
+	  $.ajax(invite_button.action, {
+	    method: invite_button.method,
+	    data: $(this).serialize()
+	  })
+	  .done(function() {
+	    $.ajax({
+	    	url: '/groups/' + group_id
+	    }).done(function(groupHTML) {
+	    	group = $('#group');
+	      group.replaceWith(groupHTML);
+	    });
+	  });
+	});
 });
