@@ -1,7 +1,5 @@
 <div class="row">
   <div class="small-10 medium-7 large-11 column" data-equalizer-watch id="profile-container">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <h2 id="name" class="small-centered medium-centered large-centered columns text-center">
       <%= @user.first_name %> <%= @user.last_name %>
     </h2>
@@ -9,40 +7,13 @@
       <h3>Self Check Day: </h3><h3><%= @user.check_day_of_month %>th of every month</h3>
       <h3>Contact method: </h3><h3><%= @user.prefered_contact%></h3> <h3>Phone number: </h3><h3><%= @user.phone%></h3>
     <button type="button" class="buttons">Edit profile</button>
-    </div>
+  </div>
 
-    <div id="group">
-      <%= render partial: 'groups/show', locals: {group: @user.groups.first}%>
-    </div>
-
+  <div id="group">
+    <%= render partial: 'groups/show', locals: {group: @user.groups.first}%>
+  </div>
+    
     <div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
-=======
-    <h2 id="name">
-=======
-    <h2 id="name" class="small-centered medium-centered large-centered columns text-center">
->>>>>>> add styling for profile page
-      <%= @user.first_name %> <%= @user.last_name %>
-    </h2>
-    <div id="personal-info" class="small-centered medium-centered large-centered columns text-center">
-      <h3>Self Check Day: </h3><h3><%= @user.check_day_of_month %>th of every month</h3>
-      <h3>Contact method: </h3><h3><%= @user.prefered_contact%></h3> <h3>Phone number: </h3><h3><%= @user.phone%></h3>
-    <button type="button" class="buttons">Edit profile</button>
-    </div>
-
-    <div id="group">
-      <%= render partial: 'groups/show', locals: {group: @user.groups.first}%>
-    </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div>
->>>>>>> change font color with rgba
-=======
-    <div id="invite-form">
->>>>>>> add styling for profile page
-=======
-    <div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
->>>>>>> change styling on profile
       <%= form_for @invite do |f| %>
         <%= f.label "Invite your friends to join!" %>
         <%= f.email_field :email %>
