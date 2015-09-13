@@ -41,9 +41,18 @@ h2 {
   font-style: italic;
 }
 
+h3, h4 {
+  font-family: 'Quicksand', serif;
+  color: white;
+}
+
 .container {
   width: 50%;
   margin-left: 30px;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 #lil-container {
@@ -97,6 +106,7 @@ a.fi-heart:hover {
 .italic {
   font-style: italic;
   color: #f6f6b6;
+  font-size: 1.4em;
 }
 
 #slide2 {
@@ -119,6 +129,10 @@ a.fi-heart:hover {
   padding: 15px;
 }
 
+.small-break {
+  padding: 5px;
+}
+
 .fi-check {
   font-size: 1.8em;
 }
@@ -130,6 +144,14 @@ a.fi-heart:hover {
 .splash_tabs{
 }
 
+.logos {
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.logos.dog {
+  padding-top: 10px;
+}
 #profile-container {
   min-height: 70%;
   max-height: 70%;
