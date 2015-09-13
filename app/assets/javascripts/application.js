@@ -26,7 +26,6 @@ login = function(response) {
 		$('#user_profile_link').text(response["name"]);
 		$('.user_links').toggle();
 		$("#account_modal").foundation('reveal', 'close');
-		console.log(response.html);
 		$('#xhr_container').empty().html(response.html);
 	};
 };
