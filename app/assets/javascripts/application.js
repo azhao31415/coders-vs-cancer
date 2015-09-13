@@ -26,6 +26,8 @@ login = function(response) {
 		$('#user_profile_link').text(response["name"]);
 		$('.user_links').toggle();
 		$("#account_modal").foundation('reveal', 'close');
+		$('#xhr_container').empty().html(response.html);
+		$(document).foundation('reflow');
 	};
 };
 
@@ -33,10 +35,12 @@ logout = function() {
 	$.ajax({
 		url: "/logout",
 		dataType: "json"
-	}).done(function(saveMessage){
+	}).done(function(response){
 		$('#user_profile_link').text("no user");
 		$('.user_links').toggle();
-	}).fail(function(saveMessage){
+		$('#xhr_container').empty().html(response.html);
+		$(document).foundation('reflow');
+	}).fail(function(response){
 	 	console.log("logout failed");
 	});
 };
