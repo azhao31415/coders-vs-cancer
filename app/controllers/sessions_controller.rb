@@ -11,8 +11,10 @@ class SessionsController < ApplicationController
 		respond_to do |format|
 			if @user && @user.authenticate(user_params[:password])
 				session[:user_id] = @user.id
+				@html = render_to_string('users/show', layout: false)
 				format.html { redirect_to root_path, notice: 'Welcome.' }
-				format.json { render json: {status: :created, name: @user.first_name} }
+				format.json { render json: {status: :created, name: @user.first_name, html: @html } }
+
 			else
 				format.html { render :new }
 				format.json { render json: {status: :failed} }
