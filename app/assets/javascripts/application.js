@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).foundation();
-var signup, login, logout
+var signup, login, logout,accountModalOpen,accountModalTypeSelect,loadSignup,loadLogin
 login = function(response) {
 	if (response.status == "failed") {
 		$('#login_warning').show();
@@ -73,6 +73,7 @@ loadSignup = function(){
 		dataType: "html"
 	}).done(function(response){
 		$('#signup').html(response);
+		$(document).foundation('reflow');
 	}).fail(function(){
 		console.log('failed');
 	});
@@ -84,6 +85,7 @@ loadLogin = function(){
 		dataType: "html"
 	}).done(function(response){
 		$('#login').html(response);
+		$(document).foundation('reflow');
 	}).fail(function(){
 		console.log('failed');
 	});
@@ -128,6 +130,13 @@ $(document).on('ready page:load', function(){
 		event.preventDefault();
 		accountModalOpen("signup");
 	});
-
+	$('#panel1').on('toggled', function (event, tab) {
+		$(document).foundation('reflow');    
+	});
+	$('#panel2').on('toggled', function (event, tab) {
+		$(document).foundation('reflow');	
+	});
+	$('#panel3').on('toggled', function (event, tab) {
+		$(document).foundation('reflow');	
+	});
 });
-
