@@ -27,6 +27,7 @@ login = function(response) {
 		$('.user_links').toggle();
 		$("#account_modal").foundation('reveal', 'close');
 		$('#xhr_container').empty().html(response.html);
+		$(document).foundation('reflow');
 	};
 };
 
@@ -38,6 +39,7 @@ logout = function() {
 		$('#user_profile_link').text("no user");
 		$('.user_links').toggle();
 		$('#xhr_container').empty().html(response.html);
+		$(document).foundation('reflow');
 	}).fail(function(response){
 	 	console.log("logout failed");
 	});
