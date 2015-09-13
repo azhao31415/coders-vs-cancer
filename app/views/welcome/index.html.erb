@@ -2,7 +2,7 @@
     <div class="small-11 medium-10 large-10 large-centered column text-center" id="lil-container">
       <div class="tabs-content">
         <div class="splash_tabs content active" id="panel1">
-          <h1 class="splash"> ladybug </h1>
+          <h1 class="splash"> ladybug <%= image_tag("ladybug-black.png") %> </h1>
           <div class="break">
             <h2>
               Brands take care of you when you take care of you.
@@ -24,30 +24,52 @@
         </div>
       </div>
       <div class="splash_tabs content" id="panel2">
-        <h1 class="splash"> ladybug </h1>
-        <h2>Why check yourself?</h2>
-        <div class="paragraph">
+        <h1 class="splash"> ladybug <%= image_tag("ladybug-black.png") %></h1>
+        <div class="break"><h2>Get monthly reminders</h2></div>
+        <div class="row">
+          <div class="small-6 large-8 large-centered columns">
           <p class="italic">“Forty percent of diagnosed breast cancers are detected by women who feel a lump, so establishing a regular breast self-exam is very important.”</p>
-        </div>
-
-        <div class="paragraph">
-          <p class="copy">While mammograms can help you to detect cancer before you can feel a lump, breast self-exams help you to be familiar with how your breasts look and feel so you can alert your healthcare professional if there are any changes.</p>
+            <h3>While mammograms can help you to detect cancer before you can feel a lump, breast self-exams help you to be familiar with how your breasts look and feel so you can alert your healthcare professional if there are any changes.</h3>
           </div>
-        <div class="paragraph">
-          <p class="copy">When combined with regular medical care and appropriate guideline-recommended mammography, breast self-exams can help women know what is normal for them so they can report any changes to their healthcare provider</p>
         </div>
       </div>
       <div class="splash_tabs content" id="panel3">
-        <h1 class="splash"> ladybug </h1>
-        <h2>Earn discounts with meaningful brands.</h2>
-        <p> </p>
+        <h1 class="splash"> ladybug <%= image_tag("ladybug-black.png") %></h1>
+        <div class="break"><h2>How to use the app</h2></div>
+        <div class="row">
+          <div class="small-6 large-8 large-centered columns">
+            <ul>
+            <li><h3>1. Sign up for ladybug</h3></li>
+            <li><h3>2. Receive a monthly reminder via text</h3></li>
+            <li><h3>3. Confirm your self check and get reward points</h3></li>
+            <li><h3>4. Invite your friends to join</h3></li>
+            <li><h3>5. Get more points if they sign up</h3></li>
+            <li><h3>6. Redeem your points for rewards & discounts</h3></li>
+            <li><h3>7. Live healthily! </h3></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="splash_tabs content" id="panel4">
+        <h1 class="splash"> ladybug <%= image_tag("ladybug-black.png") %></h1>
+        <div class="break"><h2>Earn discounts with meaningful brands.</h2></div>
+        <div class="row">
+          <div class="small-6 large-8 large-centered columns">
+            <div class="logos"><%= image_tag("logo-2.png") %></div>
+            <div class="logos"><%= image_tag("logo-3.gif") %></div>
+            <div class="logos"><%= image_tag("logo-4.png") %></div>
+            <div class="small-break"><h3>Every time you do your self-check, you earn points that qualify you for discounts with participating brands that promote health & wellness. </h3></div>
+            <div class="logos dog"><%= image_tag("logo-5.png") %></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
       <ul class="tabs" data-tab>
-        <li class="tab-title active"><a class="tab-panel"href="#panel1"><i class="fi-heart"></i></a></li>
+        <li class="tab-title active"><a class="tab-panel" href="#panel1"><i class="fi-heart"></i></a></li>
         <li class="tab-title"><a class="tab-panel" href="#panel2"><i class="fi-heart"></i></a></li>
         <li class="tab-title"><a class="tab-panel" href="#panel3"><i class="fi-heart"></i></a></li>
+        <li class="tab-title"><a class="tab-panel" href="#panel4"><i class="fi-heart"></i></a></li>
       </ul>
     </div>
   </div>
