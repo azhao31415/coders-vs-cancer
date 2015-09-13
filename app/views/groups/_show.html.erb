@@ -1,7 +1,11 @@
-<div>
+<div class="individual-group">
   <h4>Group</h4>
-  <div><%= group.name.capitalize %></div>
+  <div class="row">
+  <div class="group-name"><%= group.name.capitalize %></div>
   <% group.users.each do |user| %>
-    <%= render partial: 'users/show', locals: {user: user} %>
+    <div class="large-2 columns left">
+      <%= render partial: 'users/show', locals: {user: user} %>
+    </div>
   <% end %>
-</div>
+  </div>
+ </div>
