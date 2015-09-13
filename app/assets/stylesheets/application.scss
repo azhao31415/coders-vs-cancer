@@ -129,3 +129,50 @@ a.fi-heart:hover {
 
 .splash_tabs{
 }
+
+#profile-container {
+  min-height: 70%;
+  max-height: 70%;
+  overflow: hidden;
+  background-color: rgba(128,128,128,0.7);
+  border: 10px solid rgba(255,255,255,0.7);
+  margin-top: 8%;
+  left: 30px;
+}
+
+#name {
+  margin-top: 6%;
+}
+
+.buttons {
+  background-color: #202020;
+  opacity: 0.6;
+  border-radius: 25px;
+  padding: 1.2%;
+}
+
+.group-name {
+  color: #FFCC00;
+  font-size: 1.5em;
+  margin-left: 5%;
+}
+
+.members {
+  border: 1px solid black;
+  border-radius: 50%;
+  }
+
+#personal-info {
+  border: 2px dotted #CECEFF;
+  border-radius: 10px;
+  width: 60%;
+}
+
+#invite-form {
+  width: 40%;
+  margin-top: 10%;
+}
+
+.individual-group {
+  margin-top: 8%;
+}
