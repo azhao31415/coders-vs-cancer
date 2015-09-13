@@ -15,7 +15,7 @@
     
     <div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
       <%= form_for @invite do |f| %>
-        <%= f.label "Invite your friends to join!" %>
+        <%= f.label "Email Address" %>
         <%= f.email_field :email %>
         <%= f.submit 'Invite a friend', class: 'submit button', id: 'invite' %>
         <%= hidden_field_tag 'group_id', @user.groups.first.id %>
