@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 <div class="individual-group">
-=======
->>>>>>> change styling on profile
-<h4>Group</h4>
-<div class="row">
-<div class="group-name"><%= group.name.capitalize %></div>
-<% group.users.each do |user| %>
-  <div class="large-2 columns left">
-    <%= render partial: 'users/show', locals: {user: user} %>
+  <h4>Group</h4>
+  <div class="row">
+  <div class="group-name"><%= group.name.capitalize %></div>
+  <% group.users.each do |user| %>
+    <div class="large-2 columns left">
+      <%= render partial: 'users/show', locals: {user: user} %>
+    </div>
+  <% end %>
   </div>
-<% end %>
-<<<<<<< HEAD
-</div>
-=======
->>>>>>> change styling on profile
 </div>
