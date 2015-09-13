@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  color: black;
+  color: rgba(0,0,0,0.7);
   font-family: 'Quicksand', serif;
   font-size: 5.0em;
 }
@@ -50,13 +50,10 @@ h2 {
   min-height: 70%;
   max-height: 70%;
   overflow: hidden;
-  background-color: gray;
-  opacity: .7;
+  background-color: rgba(128,128,128,0.7);
   border: 10px solid white;
-  /*box-shadow:  5px 5px -5px orange;*/
   margin-top: 8%;
   left: 30px;
-
 }
 
 p {
@@ -129,4 +126,25 @@ a.fi-heart:hover {
 
 .paragraph {
   width: 50%;
+}
+
+#profile-container {
+  min-height: 70%;
+  max-height: 70%;
+  overflow: hidden;
+  background-color: rgba(128,128,128,0.7);
+  border: 10px solid white;
+  margin-top: 8%;
+  left: 30px;
+}
+
+#name {
+  margin-top: 6%;
+}
+
+#edit-button {
+  background-color: #202020;
+  opacity: 0.6;
+  border-radius: 25px;
+  padding: 1.2%;
 }

@@ -1,23 +1,27 @@
-<h2>
-  <%= @user.first_name %> 
-  <%= @user.last_name %>
-</h2>
+<div class="row">
+  <div class="small-10 medium-7 large-11 column" data-equalizer-watch id="profile-container">
+    <h2 id="name">
+      <%= @user.first_name %> <%= @user.last_name %>
+    </h2>
 
-<div>
-  <h4>Info</h4>
-  <div>Check Day: <%= @user.check_day_of_month %></div>
-</div>
+    <div id="personal-info">
+      <p>Self Check Day: <%= @user.check_day_of_month %>th of every month</p>
+      <p>Contact method: <%= @user.prefered_contact%> Phone number: <%= @user.phone%></p>
+    </div>
+    <button type="button" id="edit-button">Edit profile</button>
 
-<div>
-  <%= form_for @invite do |f| %>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    <%= f.submit 'Invite a friend', class: 'submit button', id: 'invite' %>
-    <%= hidden_field_tag 'group_id', @user.groups.first.id %>
-    <%= hidden_field_tag 'user_id', @user.id %>
-  <% end %>
-</div>
+    <div>
+      <%= render partial: 'groups/show', locals: {group: @user.groups.first} %>
+    </div>
 
-<div>
-  <%= render partial: 'groups/show', locals: {group: @user.groups.first} %>
+    <div>
+      <%= form_for @invite do |f| %>
+        <%= f.label "Invite your friends to join!" %>
+        <%= f.email_field :email %>
+        <%= f.submit 'Invite a friend', class: 'submit button', id: 'invite' %>
+        <%= hidden_field_tag 'group_id', @user.groups.first.id %>
+        <%= hidden_field_tag 'user_id', @user.id %>
+      <% end %>
+    </div>
+  </div>
 </div>
