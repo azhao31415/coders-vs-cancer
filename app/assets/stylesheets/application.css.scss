@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  color: pink;
+  color: black;
   font-family: 'Quicksand', serif;
   font-size: 5.0em;
 }
@@ -98,7 +98,7 @@ a.fi-heart:hover {
 
 .italic {
   font-style: italic;
-  color: yellow;
+  color: #f6f6b6;
 }
 
 #slide2 {
@@ -125,4 +125,8 @@ a.fi-heart:hover {
 
 .fi-check {
   font-size: 1.8em;
+}
+
+.paragraph {
+  width: 50%;
 }
