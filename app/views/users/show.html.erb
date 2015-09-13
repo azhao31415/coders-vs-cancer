@@ -1,5 +1,6 @@
 <div class="row">
   <div class="small-10 medium-7 large-11 column" data-equalizer-watch id="profile-container">
+<<<<<<< HEAD
     <h2 id="name" class="small-centered medium-centered large-centered columns text-center">
       <%= @user.first_name %> <%= @user.last_name %>
     </h2>
@@ -14,6 +15,23 @@
     </div>
 
     <div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
+=======
+    <h2 id="name">
+      <%= @user.first_name %> <%= @user.last_name %>
+    </h2>
+
+    <div id="personal-info">
+      <p>Self Check Day: <%= @user.check_day_of_month %>th of every month</p>
+      <p>Contact method: <%= @user.prefered_contact%> Phone number: <%= @user.phone%></p>
+    </div>
+    <button type="button" id="edit-button">Edit profile</button>
+
+    <div>
+      <%= render partial: 'groups/show', locals: {group: @user.groups.first} %>
+    </div>
+
+    <div>
+>>>>>>> change font color with rgba
       <%= form_for @invite do |f| %>
         <%= f.label "Invite your friends to join!" %>
         <%= f.email_field :email %>
