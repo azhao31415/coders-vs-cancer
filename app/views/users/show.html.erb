@@ -9,16 +9,18 @@
     <button type="button" class="buttons">Edit profile</button>
 </div>
 
-<div id="group">
-  <%= render partial: 'groups/show', locals: {group: @user.groups.first}%>
-</div>
-  
-<div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
-      <%= form_for @invite do |f| %>
-        <%= f.label "Email Address" %>
-        <%= f.email_field :email %>
-        <%= f.submit 'Invite a friend', class: 'submit button', id: 'invite' %>
-       <%= hidden_field_tag 'group_id', @user.groups.first.id %>
-        <%= hidden_field_tag 'user_id', @user.id %>
-      <% end %>
- </div>
+<% if @user.groups %>
+  <div id="group">
+    <%= render partial: 'groups/show', locals: {group: @user.groups.first}%>
+  </div>
+    
+  <div id="invite-form" class="small-centered medium-centered large-centered columns text-center">
+        <%= form_for(@invite) do |f| %>
+          <%= f.label "Email Address" %>
+          <%= f.email_field :email %>
+          <%= f.submit 'Invite a friend', class: 'submit button', id: 'invite' %>
+         <%= hidden_field_tag 'group_id', @user.groups.first.id %>
+          <%= hidden_field_tag 'user_id', @user.id %>
+        <% end %>
+   </div>
+<% end %>
