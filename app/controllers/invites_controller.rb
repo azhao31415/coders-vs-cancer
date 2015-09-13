@@ -1,7 +1,8 @@
 class InvitesController < ApplicationController
   def create
     invitee = User.find_by(email: params[:invite][:email])
-    invitee.groups.first.id = params[:group_id]
+    group = Group.find(params[:group_id])
+    group.users << invitee
 
     redirect_to user_path(params[:user_id])
   end
